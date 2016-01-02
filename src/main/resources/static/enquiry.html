@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Getway Properties</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description"  content="Getway Properties"/>
+    <meta name="keywords" content="">
+    <meta name="author"  content=""/>
+    <meta name="MobileOptimized" content="320">
+    <!--srart theme style -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <!-- end theme style -->
+
+    <!-- favicon links -->
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+</head>
+<body ng-app="myApp" ng-controller="EnquiryController">
+
+<!--Header start-->
+<div class="gp_header user_login"> <!--add class 'user_login' when user login-->
+    <!--top section start-->
+    <div class="gp_nav_toggle"><span></span></div>
+    <div class="gp_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="gp_top_left">
+                        <div class="gp_logo"> <a href="index.html"><img src="images/logo.png" alt="logo"/></a> </div>
+                        <div class="gp_top_search_wrapper">
+                            <ul>
+                                <li><a id="gp_search_link" href="javascript:;">Search Property <i class="fa fa-angle-down"></i></a></li>
+                                <li><a href="javascript:;">Property Management Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gp_top_right"> <a class="gp_lyp" href="javascript:;">List Your Property</a>
+                        <ul class="gp_login_link">
+                            <li><a href="index-login.html">Welcome Rakesh</a>
+                                <ul>
+                                    <li><a href="javascript:;">My Profile</a></li>
+                                    <li><a href="javascript:;">Change Password</a></li>
+                                    <li><a href="javascript:;">My Favorites</a></li>
+                                    <li><a href="index.html">Logout</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <ul class="gp_social">
+                            <li><a href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--top section end-->
+
+    <!--bottom section start-->
+    <div class="gp_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-2">
+                    <div class="gp_search_property_tab">
+                        <ul>
+                            <li><a class="active" href="#residential_tab1">Residential</a></li>
+                            <li><a href="#commercial_tab2">Commercial</a></li>
+                            <li><a href="#land_tab3">Land</a></li>
+                        </ul>
+                        <div class="gp_spt_wrapper">
+                            <div id="residential_tab1" class="gp_spt_content">
+                                <div class="gp_search_wrapper">
+                                    <div class="gp_radio">
+                                        <div class="radio">
+                                            <input id="buy" type="radio" name="option" value="buy" checked>
+                                            <label for="buy">Buy</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input id="lease" type="radio" name="option" value="lease">
+                                            <label for="lease">Lease</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input id="rent" type="radio" name="option" value="rent">
+                                            <label for="rent">Rent</label>
+                                        </div>
+                                    </div>
+                                    <input class="gp_search_input" type="search" placeholder="Region, City, town or Postal Code">
+                                    <select class="gp_select">
+                                        <option value="Property Type">Property Type</option>
+                                        <option value="type1">type1</option>
+                                        <option value="type2">type2</option>
+                                    </select>
+                                    <div class="clearfix"></div>
+                                    <div class="text-right">
+                                        <button type="button" class="btn btn-primary btn-lg pull-right"><i class="fa fa-search"></i> Search</button>
+                                        <select class="gp_select pull-right">
+                                            <option value="Property Type">Price</option>
+                                            <option value="type1">type1</option>
+                                            <option value="type2">type2</option>
+                                        </select>
+                                        <select class="gp_select pull-right">
+                                            <option value="Property Type">Bathroom</option>
+                                            <option value="type1">type1</option>
+                                            <option value="type2">type2</option>
+                                        </select>
+                                        <select class="gp_select pull-right">
+                                            <option value="Property Type">Bathroom</option>
+                                            <option value="type1">type1</option>
+                                            <option value="type2">type2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="commercial_tab2" class="gp_spt_content"> Tab 2 content </div>
+                            <div id="land_tab3" class="gp_spt_content">Tab 3 content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--bottom section end-->
+</div>
+<!--Header end-->
+
+
+<!--List your property start-->
+
+<div class="gp_list_your_property_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="gp_list_detail">
+                    <h3>List your Property</h3>
+                    <p>Cras rutrum ultrices enim, sed condimentum erat vestibulum placerat. Nulla mollis justo nec viverra congue. Fusce in quam dictum, vestibulum elit at, tempor neque. Integer ultrices nisi quis ex accumsan, eu luctus neque mattis. Sed accumsan interdum blandit dignissim iaculis ante, sit amet sagittis ipsum mollis id.</p>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-sm-8">
+                <div class="gp_list_your_property">
+                    <h4>Required fields are marked *</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="gp_input_wrapper">
+                                <label>Your Name</label>
+                                <div class="gp_input">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="gp_input_wrapper">
+                                <label>Your Email</label>
+                                <div class="gp_input">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-6">
+                            <div class="gp_input_wrapper">
+                                <label>Phone/Mobile Number</label>
+                                <div class="gp_input">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="gp_input_wrapper">
+                                <label>Location</label>
+                                <div class="gp_input">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-6">
+                            <div class="gp_i_want_to">
+                                <span>I want to</span>
+                                <div class="gp_radio">
+                                    <div class="radio">
+                                        <input id="buy1" type="radio" name="i_want_to" value="buy1" checked="">
+                                        <label for="buy1">Buy</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input id="lease1" type="radio" name="i_want_to" value="lease1">
+                                        <label for="lease1">Lease</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input id="rent1" type="radio" name="i_want_to" value="rent1">
+                                        <label for="rent1">Rent</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="gp_property_type">
+                                <span>Property Type</span>
+                                <div class="gp_radio">
+                                    <div class="radio">
+                                        <input id="commercial" type="radio" name="property_type" value="commercial" checked="">
+                                        <label for="commercial">Commercial</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input id="residential" type="radio" name="property_type" value="residential">
+                                        <label for="residential">Residential</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-6">
+                            <div class="gp_input_wrapper">
+                                <label>Property Sub Type</label>
+                                <div class="gp_select_label">
+                                    <select>
+                                        <option value="">Select Type</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="gp_input_wrapper">
+                                <label>City</label>
+                                <div class="gp_select_label">
+                                    <select>
+                                        <option value="">Select City</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-6">
+                            <div class="gp_input_wrapper">
+                                <label>Location</label>
+                                <div class="gp_select_label">
+                                    <select>
+                                        <option value="">Select Location</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-6">
+                            <div class="gp_input_wrapper">
+                                <label>Message</label>
+                                <div class="gp_input">
+                                    <textarea></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <a class="gp_submit_list" href="javascript:;">Submit</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+                <div class="gp_contact_info">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>
+                            <div class="icon"><img src="images/map_marker.png" alt="" /></div>
+                            <div class="detail">
+                                <h3>Office Address</h3>
+                                <p>tempor neque. Integer ultrices nisi quis </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon"><img src="images/phone.png" alt="" /></div>
+                            <div class="detail">
+                                <h3>Phone number</h3>
+                                <p>tempor neque. Integer ultrices nisi quis </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon"><img src="images/envelope.png" alt="" /></div>
+                            <div class="detail">
+                                <h3>Email Address</h3>
+                                <p>tempor neque. Integer ultrices nisi quis </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--List your property end-->
+
+
+<!--footer start-->
+<div class="gp_footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-sm-8">
+                <div class="gp_fcd">
+                    <h3>Didn't find what you were looking for?</h3>
+                    <p>Please fill in the REQUIREMENT FORM to help us understand your real estate needs!</p>
+                    <div class="inquirie_email">
+                        <div class="inquiries">
+                            <h4>For Inquiries</h4>
+                            <p>+919867947410</p>
+                        </div>
+                        <div class="email">
+                            <h4>Email:</h4>
+                            <p>info@gatewayproperties.com</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+                <div class="gp_footer_social">
+                    <ul>
+                        <li><a class="facebook" href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="google-plus" href="javascript:;"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a class="twitter" href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="linkedin" href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    <h4>Office Address:</h4>
+                    <p>123, Kingfisher Real Estate, Dani Compound, Kalina Mumbai 400909</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="gp_copyright">
+                    <ul>
+                        <li><a href="javascript:;">BUY/RENT</a></li>
+                        <li><a href="javascript:;">SELL/LEASE</a></li>
+                        <li><a href="javascript:;">BLOG</a></li>
+                        <li><a href="javascript:;">SERVICES</a></li>
+                    </ul>
+                    <p>©2015 Copyright Kingfisher Realities. All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--footer end-->
+
+<!--main js file start-->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/enquiryController.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.parallax-scroll.js"></script>
+<script type="text/javascript" src="js/plugin/smoothscroll/smoothscroll.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!--main js file end-->
+</body>
+</html>
