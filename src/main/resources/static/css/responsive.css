@@ -6,9 +6,17 @@ Copyright (c) 2015
 
 /* Large desktop */
 @media (min-width: 1200px) {
+.gp_about_tab,
+.gp_about_wrapper,
 .gp_right_sidebar,
 .gp_listing_wrapper{
 	min-height:1224px;
+	}	
+	}
+
+@media (max-width: 1200px) {
+.gp_profile_wrapper > div > h3{
+	margin-left:0;
 	}	
 	}
 
@@ -41,13 +49,35 @@ Copyright (c) 2015
 	}
 .gp_search_listing_wrapper .container > .row > .col-md-3{
 	padding-left:15px;
-	}	
+	}
+.gp_slider_wrapper .gp_exclusive img{
+	width:140px;
+	}		
 	
 	}
 	
 	 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+.gp_slider_img{
+	height:auto !important;
+}	
+.gp_slider_wrapper .gp_exclusive img{
+	width:100px;
+	}	
+.gp_profile_wrapper > div > h3{
+	margin-left:-15px;
+	}	
+.gp_profile_image img{
+	float:left;
+	}	
+.gp_profile_wrapper .gp_profile_tab .gp_tab_content_wrapper{
+    padding: 18px 0; 
+	}	
+.gp_profile_wrapper .gp_profile_tab > ul > li > a{
+    padding: 6px 8px;
+    font-size: 13px;	
+	}	
 .gp_list_your_property_wrapper,	
 .gp_propery_detail_wrapper,
 .gp_search_listing_wrapper{
@@ -143,7 +173,16 @@ Copyright (c) 2015
 	}
 .gp_top_right .gp_login_link li a{
 	line-height:40px;
+	font-weight:300;
 	}
+.gp_top_right .gp_login_link li a.active{
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #4F9DB2;
+}
+.gp_top_left .gp_top_search_wrapper ul li a.active{
+	color: #4F9DB2;
+}	
 .gp_top_right .gp_login_link li:after{
 	display:none;
 	}		
@@ -162,7 +201,13 @@ Copyright (c) 2015
 	border:none;
 	padding:0;
 	margin-left: 10px;
+	font-weight:300;
 	}	
+.gp_top_right .gp_lyp.active{
+	font-weight:bold;
+	letter-spacing:1px;
+    color: #4F9DB2;	
+}	
 .gp_top_right .gp_social{
 	margin-left: 0;
 	margin: 0 auto;
@@ -273,8 +318,14 @@ Copyright (c) 2015
     background-color: transparent;
     color: #fff;
     padding: 0;
+	font-width:300;
     border-bottom: none;		
 	}
+.gp_header.user_login .gp_top_right .gp_login_link > li > ul > li > a.active{
+	font-weight:bold;
+	letter-spacing:1px;
+	color: #4F9DB2;
+}	
 .gp_header.user_login .gp_top_right .gp_login_link > li > ul > li > a:hover{
 	font-weight:normal;
 	}	
@@ -364,7 +415,11 @@ Copyright (c) 2015
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
-	
-
+.gp_profile_wrapper .gp_profile_tab > ul{
+    padding-left: 0px;	
+	}	
+.gp_slider_wrapper .gp_exclusive img{
+	width:60px;
+	}	
 		
 }
